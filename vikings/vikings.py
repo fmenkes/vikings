@@ -36,6 +36,8 @@ def update(dt):
             if obj.can_traverse_water:
                 if obj.x == removal.saved_position[0] and obj.y == removal.saved_position[1]:
                     removal.delete()
+                    for handler in removal.event_handlers:
+                        game_window.remove_handlers(handler)
                     game_objects.remove(removal)
                     give_control.append(obj)
 

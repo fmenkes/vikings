@@ -1,5 +1,4 @@
 import pyglet
-import numpy
 import tile
 import worldgen
 
